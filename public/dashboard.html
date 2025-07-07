@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .dashboard {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3367d6;
+    }
+
+    #adminBtn {
+      background-color: #3e8e41;
+    }
+
+    #adminBtn:hover {
+      background-color: #2f6e32;
+    }
+
+    #logoutBtn {
+      background-color: #d9534f;
+    }
+
+    #logoutBtn:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome, <span id="roleText">employee</span>!</h1>
+    <button onclick="location.href='/form.html'">✍️ Fill Out Evaluation</button>
+    <button id="adminBtn" onclick="location.href='/admin.html'" style="display: none;">🛠️ Admin Panel</button>
+    <button id="logoutBtn" onclick="logout()">🚪 Log Out</button>
+  </div>
+
+  <script>
+    const role = sessionStorage.getItem("role") || "user";
+    const roleText = document.getElementById("roleText");
+    const adminBtn = document.getElementById("adminBtn");
+
+    roleText.textContent = role === "admin" ? "Admin" : "Employee";
+
+    if (role === "admin") {
+      adminBtn.style.display = "block";
+    }
+
+    function logout() {
+      sessionStorage.clear();
+      window.location.href = "/";
+    }
+  </script>
+</body>
+</html>

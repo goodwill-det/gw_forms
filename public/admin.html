@@ -1,0 +1,43 @@
+<!-- public/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel – GreenWorks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1> Admin Panel </h1>
+
+  <section class="add-form">
+    <h2>Add New Employee</h2>
+    <input type="text" id="empId" placeholder="Employee ID" />
+    <input type="text" id="empName" placeholder="Employee Name" />
+    <input type="password" id="empPassword" placeholder="Password" />
+    <select id="empRole">
+      <option value="user">Employee</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button id="addEmployeeBtn">Add Employee</button>
+  </section>
+
+  <section class="table-section">
+    <h2>Current Employees</h2>
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows dynamically populated -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Evaluation Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Weekly Performance Evaluation</h1>
+
+        <form id="evaluationForm">
+            <label for="employee_id">Select Employee</label>
+            <select id="employeeId" name="employee_id" required>
+                <option value="">-- Select an Employee --</option>
+            </select>
+
+            <div class="form-section">
+                <label>Dressed appropriately</label>
+                <div class="radio-group" data-name="dressed"></div>
+
+            </div>
+
+
+            <div class="form-section">
+                <label for="direction">Able to take direction</label>
+                <div class="radio-group" data-name="direction"></div>
+            </div>
+
+
+            <div class="form-section">
+                <label for="perfomed">Performed duties as directed</label>
+                <div class="radio-group" data-name="performed"></div>
+            </div>
+
+
+
+            <div class="form-section">
+                <label for="supervision">Works without supervision</label>
+                <div class="radio-group" data-name="supervision"></div>
+
+
+            </div>
+
+            <div class="form-section">
+                <label for="helpfulness">Willingness to help others</label>
+                <div class="radio-group" data-name="helpfulness"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="beyond">Goes beyond what is required</label>
+                <div class="radio-group" data-name="beyond"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="attitude">Attitude about job</label>
+                <div class="radio-group" data-name="attitude"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="attendance">Attendance</label>
+                <div class="radio-group" data-name="attendance"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="paperwork">Paperwork completion</label>
+                <div class="radio-group" data-name="paperwork"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="organize">Organizational skills</label>
+                <div class="radio-group" data-name="organize"></div>
+            </div>
+
+            <div class="form-section">
+                <label for="safety">Operates machinery safely</label>
+                <div class="radio-group" data-name="safety"></div>
+            </div>
+
+
+            <button type="submit">Submit Evaluation</button>
+            <p id="submitStatus"></p>
+        </form>
+    </div>
+    <script src="form.js"></script>
+
+
+    <div id="passwordChangeSection" class="form-section">
+  <h2>Change Your Password</h2>
+  <form id="passwordChangeForm">
+    <label for="currentPassword">Current Password</label>
+    <input type="password" id="currentPassword" required />
+
+    <label for="newPassword">New Password</label>
+    <input type="password" id="newPassword" required />
+
+    <label for="confirmPassword">Confirm New Password</label>
+    <input type="password" id="confirmPassword" required />
+
+    <button type="submit">Update Password</button>
+    <p id="passwordChangeStatus"></p>
+  </form>
+</div>
+
+</body>
+
+</html>

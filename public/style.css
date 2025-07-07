@@ -1,0 +1,230 @@
+/* ========== Base Reset ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* ========== Shared Headings ========== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ========== Centered Page Layout ========== */
+.form-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Login & Splash ========== */
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-box input {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ========== Admin Panel ========== */
+.add-form,
+.table-section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input, select {
+  padding: 8px;
+  margin: 5px;
+  width: calc(100% - 20px);
+}
+
+.edit-name,
+.edit-role {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* ========== Evaluation Form ========== */
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label,
+.form-section p {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* ========== Pill Radio Buttons ========== */
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 48px;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  user-select: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group input[type="radio"]:checked + label,
+.radio-group label:has(input[type="radio"]:checked) {
+  background-color: #267d3e;
+  color: white;
+  border-color: #1a5d2d;
+}
+
+#submitStatus {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ========== Buttons ========== */
+button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+form button {
+  width: 100%;
+  background-color: #267d3e;
+}
+
+form button:hover {
+  background-color: #1f6a35;
+}
+
+/* ========== Utility Classes ========== */
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* ========== Responsive Styles ========== */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .radio-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .radio-group label {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
