@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:dev": "dotenv -e .env.development -- node server.js",
-    "start:prod": "dotenv --path= .env.production -- node server.js"
+    "start:prod": "dotenv --path=.env.production -- node server.js"
   },
   "keywords": [],
   "author": "",
