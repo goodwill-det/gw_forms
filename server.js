@@ -1,4 +1,4 @@
-require("dotenv").config();
+
 
 const express = require("express");
 const cors = require("cors");
@@ -6,6 +6,12 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 
+// load .env.production only when in prod
+const envPath = process.env.NODE_ENV === 'production'
+  ? path.resolve(__dirname, ".env.production")
+  : path.resolve(__dirname, ".env.development");
+
+require("dotenv").config({ path: envPath });
 
 const employeeRoutes = require("./routes/employees");
 const evaluationRoutes = require("./routes/evaluations");
