@@ -4,7 +4,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'user1',
   password: 'G00dW!11',
-  database: 'evaluation_db'
+  database: 'gwforms_db'
 });
 
 db.connect(err => {
