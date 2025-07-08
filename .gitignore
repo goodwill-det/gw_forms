@@ -1,7 +1,24 @@
-# Ignore node_modules folder
+# Node.js dependencies
 node_modules/
 
-# Ignore environment and system files
+# Environment files
 .env
+.env.*         # ignore .env.production, .env.development, etc.
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/System files
 .DS_Store
+Thumbs.db
+
+# Editor files (optional but useful)
+.vscode/
+.idea/
+
+# Build output (if any later)
+dist/
+build/
