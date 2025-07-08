@@ -1,20 +1,22 @@
+require("dotenv").config({ path: envPath });
+console.log("DEBUG → DB_USER:", process.env.DB_USER);
+console.log("DEBUG → DB_PASSWORD:", process.env.DB_PASSWORD);
+console.log("DEBUG → DB_HOST:", process.env.DB_HOST);
 
-
-const express = require("express");
-const cors = require("cors");
 const path = require("path");
-const bodyParser = require("body-parser");
-const authRoutes = require("./routes/auth");
-
 // load .env.production only when in prod
 const envPath = process.env.NODE_ENV === 'production'
   ? path.resolve(__dirname, ".env.production")
   : path.resolve(__dirname, ".env.development");
 
-require("dotenv").config({ path: envPath });
-console.log("DEBUG → DB_USER:", process.env.DB_USER);
-console.log("DEBUG → DB_PASSWORD:", process.env.DB_PASSWORD);
-console.log("DEBUG → DB_HOST:", process.env.DB_HOST);
+
+const express = require("express");
+const cors = require("cors");
+
+const bodyParser = require("body-parser");
+const authRoutes = require("./routes/auth");
+
+
 
 
 const employeeRoutes = require("./routes/employees");
