@@ -3,7 +3,7 @@ node_modules/
 
 # Environment files
 .env
-.env.*         # ignore .env.production, .env.development, etc.
+.env.*         
 
 # Logs
 *.log
