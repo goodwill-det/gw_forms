@@ -12,6 +12,10 @@ const envPath = process.env.NODE_ENV === 'production'
   : path.resolve(__dirname, ".env.development");
 
 require("dotenv").config({ path: envPath });
+console.log("DEBUG → DB_USER:", process.env.DB_USER);
+console.log("DEBUG → DB_PASSWORD:", process.env.DB_PASSWORD);
+console.log("DEBUG → DB_HOST:", process.env.DB_HOST);
+
 
 const employeeRoutes = require("./routes/employees");
 const evaluationRoutes = require("./routes/evaluations");
