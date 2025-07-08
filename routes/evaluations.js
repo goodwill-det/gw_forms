@@ -6,21 +6,21 @@ router.post("/", (req, res) => {
   const {
     employee_id, dressed, direction, performed, supervision, helpfulness,
     beyond, attitude, attendance, paperwork, organize, safety,
-    totalScore, grade
+    total, grade
   } = req.body;
 
   const sql = `
     INSERT INTO evaluations (
       employee_id, dressed, direction, performed, supervision,
       helpfulness, beyond, attitude, attendance, paperwork,
-      organize, safety, totalScore, grade
+      organize, safety, total, grade
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   const values = [
     employee_id, dressed, direction, performed, supervision,
     helpfulness, beyond, attitude, attendance, paperwork,
-    organize, safety, totalScore, grade
+    organize, safety, total, grade
   ];
 
   console.log("✅ Received evaluation:", req.body);
