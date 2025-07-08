@@ -47,10 +47,10 @@ async function addEmployee() {
 
   const result = await res.json();
   if (res.ok) {
-    alert(`✅ Employee ${name} added.`);
+    alert(` Employee ${name} added.`);
     fetchEmployees();
   } else {
-    alert(`❌ Error: ${result.error}`);
+    alert(` Error: ${result.error}`);
   }
 }
 
@@ -66,10 +66,10 @@ async function updateEmployee(id) {
 
   const result = await res.json();
   if (res.ok) {
-    alert("✅ Employee updated.");
+    alert("Employee updated.");
     fetchEmployees();
   } else {
-    alert(`❌ Error: ${result.error}`);
+    alert(` Error: ${result.error}`);
   }
 }
 
@@ -82,10 +82,10 @@ async function deleteEmployee(id) {
 
   const result = await res.json();
   if (res.ok) {
-    alert("🗑️ Employee deleted.");
+    alert(" Employee deleted.");
     fetchEmployees();
   } else {
-    alert(`❌ Error: ${result.error}`);
+    alert(` Error: ${result.error}`);
   }
 }
 

@@ -17,7 +17,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/employees", employeeRoutes);
 app.use("/api/login", authRoutes);
 app.use("/api/evaluations", evaluationRoutes);
+
 // Start server
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
+app.listen(PORT, "goodwilldetroit.online", () => {
+  console.log(` Server running at http://goodwilldetroit.online:${PORT}`);
 });

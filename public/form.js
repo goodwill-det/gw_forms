@@ -1,4 +1,4 @@
-console.log("✅ form.js loaded");
+console.log(" form.js loaded");
 
 const groups = [
   "dressed", "direction", "performed", "supervision",
@@ -42,7 +42,7 @@ async function populateEmployees() {
       select.appendChild(option);
     });
   } catch (err) {
-    console.error("❌ Failed to load employees:", err);
+    console.error("Failed to load employees:", err);
   }
 }
 
@@ -54,7 +54,7 @@ async function handleSubmit(e) {
 
   const employeeIdValue = document.getElementById("employeeId").value;
   if (!employeeIdValue) {
-    document.getElementById("submitStatus").textContent = "❗ Please select an employee.";
+    document.getElementById("submitStatus").textContent = "Please select an employee.";
     return;
   }
 
@@ -74,7 +74,7 @@ async function handleSubmit(e) {
   });
 
   if (!valid) {
-    document.getElementById("submitStatus").textContent = "❗ Please complete all categories.";
+    document.getElementById("submitStatus").textContent = " Please complete all categories.";
     return;
   }
 
@@ -97,15 +97,15 @@ async function handleSubmit(e) {
     });
 
     if (res.ok) {
-      document.getElementById("submitStatus").textContent = "✅ Evaluation submitted!";
+      document.getElementById("submitStatus").textContent = "Evaluation submitted!";
       form.reset();
     } else {
       const result = await res.text();
-      document.getElementById("submitStatus").textContent = `❌ Error: ${result}`;
+      document.getElementById("submitStatus").textContent = `Error: ${result}`;
     }
   } catch (err) {
     console.error(err);
-    document.getElementById("submitStatus").textContent = "❌ Network or server error.";
+    document.getElementById("submitStatus").textContent = "Network or server error.";
   }
 }
 
